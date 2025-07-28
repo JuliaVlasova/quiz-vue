@@ -17,6 +17,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: github-pages # This line is crucial
     steps:
       - name: Checkout
         uses: actions/checkout@v4

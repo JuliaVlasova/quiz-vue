@@ -6,11 +6,11 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: 'quiz-vue',
   plugins: [
     vue(),
     vueDevTools(),
   ],
-  base: 'quiz-vue',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

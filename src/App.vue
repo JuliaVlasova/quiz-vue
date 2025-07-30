@@ -6,10 +6,8 @@ import Quiz from './components/Quiz.vue'
 
 <template>
   <header>
-    <img alt="logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <LeftPart msg="Викторина!" />
+      <LeftPart msg="Какое вы растение?" />
     </div>
   </header>
 
@@ -30,9 +28,8 @@ header {
 
 @media (min-width: 1024px) {
   header {
-    display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+    flex: 1;
   }
 
   .logo {

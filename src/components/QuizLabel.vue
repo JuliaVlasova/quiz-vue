@@ -1,4 +1,6 @@
 <script setup>
+import { defineEmits } from 'vue';
+
 const props = defineProps({
     labelsValue: {
         type: String,
@@ -16,10 +18,15 @@ const props = defineProps({
         default: "Name одинаковый для одного блока"
     }
 })
+
+const emit = defineEmits(['clickUpdate']);
+function handleClick() {
+  emit('clickUpdate', props.labelsValue);
+}
 </script>
 
 <template>
-    <label :for="labelsId" class="quiz-label">
+    <label :for="labelsId" class="quiz-label" @click="handleClick">
         <input type="radio" :name="labelsName" :id="labelsId" :value="labelsValue">
         <span><slot></slot></span>
     </label>

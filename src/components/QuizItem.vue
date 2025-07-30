@@ -1,4 +1,6 @@
 <script setup>
+import { defineEmits } from 'vue';
+
 const props = defineProps({
     labelsHeader: {
         type: String,
@@ -6,6 +8,9 @@ const props = defineProps({
         default: "Вы забыли указать заголовок!!!"
     }
 })
+
+const emit = defineEmits(['clickUpdate']);
+
 </script>
 
 <template>

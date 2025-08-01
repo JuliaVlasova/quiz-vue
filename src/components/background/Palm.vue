@@ -5,16 +5,54 @@
 <template>
   <div class="palm">
     <div class="trunk"></div>
-    <div class="leaf"></div>
-    <div class="leaf"></div>
-    <div class="leaf"></div>
-    <div class="leaf"></div>
-    <div class="leaf"></div>
-    <div class="leaf"></div>
-    <div class="leaf"></div>
-    <div class="leaf"></div>
-    <div class="leaf"></div>
-    <div class="leaf"></div>
+    <div class="leaf-block_1">
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+    </div>
+    <div class="leaf-block_2">
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+    </div>
+    <div class="leaf-block_3">
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+    </div>
+    <div class="leaf-block_4">
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+      <div class="leaf"></div>
+    </div>
     <div class="shadow"></div>
   </div>
 </template>
@@ -58,6 +96,12 @@
   border-right: 40px solid transparent;
   border-bottom: 180px solid #228B22;
   border-radius: 100%;
+}
+
+.leaf:nth-child(1) {
+  top: -26px;
+  left: -23px;
+  transform: rotate(-173deg);
 }
 
 .leaf:nth-child(2) {
@@ -142,5 +186,29 @@
   left: 41px;
   transform: rotate(3deg);
   z-index: -1;
+}
+
+.leaf-block_2 {
+  transform: rotate(-80deg);
+  position: absolute;
+  top: 0;
+  left: 63px;
+  z-index: 1;
+}
+
+.leaf-block_3 {
+  transform: rotate(-160deg);
+  position: absolute;
+  top: -53px;
+  left: 72px;
+  z-index: 2;
+}
+
+.leaf-block_4 {
+  transform: rotate(-273deg);
+  position: absolute;
+  top: -71px;
+  left: -4px;
+  z-index: 3;
 }
 </style>

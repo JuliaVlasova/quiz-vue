@@ -44,7 +44,7 @@ function handleResult(data) {
 <template>
   <Palm />
   <div class="right-part">
-    <h3>Ответьте на вопросы - и узнайте всю правду о себе</h3>
+    <h3 v-if="currentBlockIndex < 10">Ответьте на вопросы - и узнайте всю правду о себе</h3>
 
     <template v-for="(question, index) in Object.values(questionsData)">
       <QuizItem :key="index" :labelsHeader="question.header"
@@ -55,11 +55,10 @@ function handleResult(data) {
         </QuizLabel>
       </QuizItem>
     </template>
-
   </div>
 
-  <div v-if="currentBlockIndex >= 10">
-    Ваш результат: {{ resultText }}
+  <div v-if="currentBlockIndex >= 10" class="result-block">
+    {{ resultText }}
   </div>
 </template>
 
@@ -73,6 +72,14 @@ label {
   overflow: hidden;
   overflow-y: auto;
   padding: 20px;
+}
+
+.result-block {
+  padding: 40px;
+  font-size: 2rem;
+  max-width: 300px;
+  font-weight: 700;
+  color: green;
 }
 </style>
 
